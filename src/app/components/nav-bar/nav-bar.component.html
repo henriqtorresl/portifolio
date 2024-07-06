@@ -1,1 +1,29 @@
-<p>nav-bar works!</p>
+<div class="container-mobile">
+    <button (click)="onMenuButtonClick()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</div>
+
+<app-side-bar *ngIf="isSidebarOpen"></app-side-bar>
+
+<div class="container-header">
+    <ul>
+        <li>
+            Sobre
+        </li>
+        <li>
+            Projetos
+        </li>
+        <li>
+            Contato
+        </li>
+        <li>
+            <button>
+                <mat-icon>light_mode</mat-icon>
+            </button>
+        </li>
+        <li>
+            <button>Download CV</button>
+        </li>
+    </ul>
+</div>
