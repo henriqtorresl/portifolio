@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 
@@ -12,7 +11,6 @@ import { MatSelectModule } from '@angular/material/select';
   ],
   exports: [
     MatFormFieldModule,
-    MatSidenavModule,
     MatButtonModule,
     MatSelectModule
   ]
