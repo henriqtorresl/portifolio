@@ -30,7 +30,7 @@
     }
 }
 
-.botoes {
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,14 +47,14 @@
     }
 }
 
-.botao-luz {
-
+.light-button {
+    color: #111827;
 }
 
-.botao-download {
+.download-button {
     padding: 5px 8px 5px 8px;
     color: #FFFFFF;
-    background-color: black !important;
+    background-color: #111827 !important;
     border-radius: 12px;
 }
 
@@ -70,7 +70,7 @@
         button {
             background-color: transparent;
             border: none;
-            color: black;
+            color: #4B5563;
             padding: 20px;
 
             &:hover {

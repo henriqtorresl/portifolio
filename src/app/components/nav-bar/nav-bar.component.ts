@@ -21,9 +21,15 @@ export class NavBarComponent {
   }
 
   @HostListener('document:click', ['$event'])
-  onClickOutside(event: Event) {
+  onClickOutside(event: Event): void {
     if (!this.elementRef.nativeElement.contains(event.target)) {
       this.isSidebarOpen = false; // Fecha a sidebar se o clique for fora dela
+    }
+  }
+
+  closeSideBar(event: string): void {
+    if (event == 'close') {
+      this.isSidebarOpen = false;
     }
   }
 

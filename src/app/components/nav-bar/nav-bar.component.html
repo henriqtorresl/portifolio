@@ -4,7 +4,7 @@
     </button>
 </div>
 
-<app-side-bar *ngIf="isSidebarOpen"></app-side-bar>
+<app-side-bar *ngIf="isSidebarOpen" (closeEvent)="closeSideBar($event)"></app-side-bar>
 
 <div class="container-header">
     <ul>
@@ -17,12 +17,12 @@
         <li>
             Contato
         </li>
-        <li class="botoes">
-            <button class="botao-luz">
+        <li class="buttons">
+            <button class="light-button">
                 <mat-icon>light_mode</mat-icon>
             </button>
 
-            <button class="botao-download">
+            <button class="download-button">
                 Download CV
             </button>
         </li>
