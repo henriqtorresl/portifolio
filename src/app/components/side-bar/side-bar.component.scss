@@ -57,15 +57,18 @@
   button {
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    align-items: center;
     margin: 4px 10px 0 0;
     border: none;
-    background-color: #FFFFFF;
     height: 80%;
+    background-color: #FFFFFF;
     color: #4B5563;
+    padding: 5px;
+    border-radius: 5px;
 
     &:hover {
-      color: black;
+      background-color: #EFEFEF;
+      transition: background-color 0.5s ease, transform 0.5s ease;
     }
   }
 }
@@ -85,6 +88,11 @@
     li {
       color: #4B5563;
       cursor: pointer;
+
+      &:hover {
+        color: #111827;
+        transition: background-color 0.5s ease, transform 0.5s ease;
+      }
     }
   }
 }
