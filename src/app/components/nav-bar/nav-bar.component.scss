@@ -64,6 +64,8 @@
     display: none;
 
     @media (max-width: 767px) {
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo com transparência */
         width: 100%;
         height: 5%; 
         display: flex;
