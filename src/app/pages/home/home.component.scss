@@ -140,10 +140,70 @@
     }
 }
 
+.container-tecnologies {
+    background-color: #F9FAFB;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.technologies-title {
+    margin: 20px 0 20px 0;
+    h3 {
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: #E5E7EB;
+        color: #4B5563;
+        font-weight: normal;
+    }
+}
+
+.technologies {
+    width: 100%;
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 100px);
+    align-items: start;
+}
+
+.technology {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 15px 10px;
+
+    a {
+        cursor: pointer;
+        img {
+            width: 64px;
+            height: 64px;
+        }
+
+        &:hover {
+            img {
+                transition: transform 0.3s ease-in-out;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    p {
+        color: #4B5563;
+    }
+}
+
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 992px) {
+    .container {
+        height: 70%;
+    }
+
     .container-about {
-        height: 90%;
+        height: 100%;
         width: 80%;
         display: flex;
         flex-direction: row-reverse;
@@ -151,7 +211,7 @@
     
     .picture {
         width: 30%;
-        height: 60%;
+        height: 65%;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -165,8 +225,7 @@
     
     .content {
         width: 50%;
-        height: 60%;
-
+        height: 80%;
     }
     
     .resume {
@@ -175,11 +234,19 @@
 
     .social {
         height: 25%;
+    }
+
+    .technologies {
+        width: 60%;
     }
 }
 
 // Desktop
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        height: 60%;
+    }
+
     .container-about {
         height: 90%;
         width: 80%;
@@ -206,8 +273,7 @@
 
     .content {
         width: 50%;
-        height: 60%;
-
+        height: 80%;
     }
     
     .resume {
@@ -215,15 +281,23 @@
     }
 
     .social {
-        height: 20%;
+        height: 30%;
+    }
+
+    .technologies {
+        width: 50%;
     }
 }
 
 // Telas grandes
 @media screen and (min-width: 1200px) {
+    .container {
+        height: 60%;
+    }
+
     .container-about {
         height: 90%;
-        width: 80%;
+        width: 70%;
         display: flex;
         flex-direction: row-reverse;
     }
@@ -256,10 +330,14 @@
     }
 
     .social {
-        height: 25%;
+        height: 35%;
 
         section {
             width: 30%;
         }
+    }
+
+    .technologies {
+        width: 40%;
     }
 }
