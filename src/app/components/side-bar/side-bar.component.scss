@@ -124,6 +124,11 @@
       background-color: #FFFFFF;
       height: 100%;
       font-size: 18px;
+
+      &:hover {
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.1);
+      }
     }
   }
 
