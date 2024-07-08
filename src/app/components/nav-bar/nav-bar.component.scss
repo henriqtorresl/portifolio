@@ -47,7 +47,7 @@
 
 .active {
     color: black !important;
-  }
+}
 
 .buttons {
     display: flex;
@@ -79,9 +79,15 @@
 
 .download-button {
     padding: 5px 8px 5px 8px;
-    color: #FFFFFF;
-    background-color: #111827 !important;
+    margin-left: 10px;
+    color: #FFFFFF !important;
+    background-color: #111827;
     border-radius: 12px;
+
+    &:hover {
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.1);
+    }
 }
 
 .container-mobile {
