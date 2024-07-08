@@ -1,1 +1,104 @@
 @import url('../../../styles.scss');
+
+// Mobile
+.container {
+    padding-top: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.title {
+    margin: 5px 0 5px 0;
+    height: 5%;
+
+    h3 {
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 15px;
+        background-color: var(--background-terciary-color);
+        color: var(--text-color);
+        font-weight: normal;
+    }
+}
+
+.contact {
+    height: 725px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        width: 80%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        color: var(--text-color);
+
+        section {
+            width: 90%;
+            font-size: 20px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    section {
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            cursor: pointer;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            &:hover {
+                background-color: var(--hover-button);
+                transition: background-color 0.5s ease, transform 0.5s ease;
+            }
+        }
+    }
+}
+
+.copy {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: var(--hover-button);
+        transition: background-color 0.5s ease, transform 0.5s ease;
+    }
+}
+
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    
+}
+
+// Desktop
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+// Telas grandes
+@media screen and (min-width: 1200px) {
+
+}

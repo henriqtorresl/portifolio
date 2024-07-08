@@ -1,1 +1,57 @@
-<p>contact works!</p>
+<div class="container">
+    <div class="title">
+        <h3>Contato</h3>
+    </div>
+
+    <div class="contact">
+        <div>
+            <p>
+                Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente, deseja discutir uma ideia ou simplesmente quer bater um papo, sinta-se à vontade para entrar em contato comigo.
+            </p>
+            <br>
+            <p>
+                Você pode me encontrar através dos seguintes meios:
+            </p>            
+        </div>
+
+        <div>
+            <section>
+                <mat-icon>mail</mat-icon>
+                <p>{{ email }}</p>
+                <mat-icon 
+                    class="copy"
+                    [cdkCopyToClipboard]="email"
+                    (click)="copyText()"
+                >
+                    content_copy
+                </mat-icon>
+            </section>
+
+            <section>
+                <mat-icon>call</mat-icon>
+                <p>{{ number }}</p>
+                <mat-icon 
+                    class="copy"
+                    [cdkCopyToClipboard]="number"
+                    (click)="copyText()"
+                >
+                    content_copy
+                </mat-icon>
+            </section>
+        </div>
+
+        <section>
+            <ng-container *ngIf="!darkThemeService.isDarkMode() else darkModeSocial">
+                <a href="https://github.com/henriqtorresl" target="_blank"><img src="../../../assets/github.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/henrique-torres-a08a36243/" target="_blank"><img src="../../../assets/linkedin.png" alt="Linkedin"></a>
+                <a href="https://www.instagram.com/henriqtorresl" target="_blank"><img src="../../../assets/instagram.png" alt="Instagram"></a>
+            </ng-container>
+
+            <ng-template #darkModeSocial>
+                <a href="https://github.com/henriqtorresl" target="_blank"><img src="../../../assets/github-dark.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/henrique-torres-a08a36243/" target="_blank"><img src="../../../assets/linkedin-dark.png" alt="Linkedin"></a>
+                <a href="https://www.instagram.com/henriqtorresl" target="_blank"><img src="../../../assets/instagram-dark.png" alt="Instagram"></a>
+            </ng-template>
+        </section>
+    </div>
+</div>
