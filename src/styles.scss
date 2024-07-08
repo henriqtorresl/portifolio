@@ -6,6 +6,7 @@ $background-terciary-color: #E5E7EB;
 $text-color: #4B5563;
 $text-secundary-color: #111827;
 $hover-button: #EFEFEF;
+$background-card: #FFFFFF;
 
 $dark-background-color: #030712;
 $dark-background-secundary-color: #111827;
@@ -13,6 +14,7 @@ $dark-background-terciary-color: #374151;
 $dark-text-color: #D1D5DB;
 $dark-text-secundary-color: #F9FAFB;
 $dark-hover-button: #1F2937;
+$dark-background-card: #1F2937;
 
 @mixin dark-mode {
     --background-color: #{$dark-background-color};
@@ -21,6 +23,7 @@ $dark-hover-button: #1F2937;
     --text-color: #{$dark-text-color};
     --text-secundary-color: #{$dark-text-secundary-color};
     --hover-button: #{$dark-hover-button};
+    --background-card: #{$dark-background-card};
 }
 
 :root {
@@ -30,6 +33,7 @@ $dark-hover-button: #1F2937;
     --text-color: #{$text-color};
     --text-secundary-color: #{$text-secundary-color};
     --hover-button: #{$hover-button};
+    --background-card: #{$background-card};
 }
 
 body.dark-mode {
