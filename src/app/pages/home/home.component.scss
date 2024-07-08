@@ -259,10 +259,21 @@
         img {
             width: 64px;
             height: 64px;
+            animation: float 3s ease-in-out infinite;
+
+            @keyframes float {
+                0%, 100% {
+                  transform: translatey(0);
+                }
+                50% {
+                  transform: translatey(-5px);
+                }
+            }
         }
 
         &:hover {
             img {
+                animation: none;
                 transition: transform 0.3s ease-in-out;
                 transform: scale(1.1);
             }
