@@ -159,8 +159,9 @@
 .experience-title {
     margin: 20px 0 20px 0;
     h3 {
+        border-radius: 8px;
+        font-size: 15px;
         padding: 5px 10px;
-        border-radius: 20px;
         background-color: var(--background-terciary-color);
         color: var(--text-color);
         font-weight: normal;
@@ -230,7 +231,8 @@
     margin: 20px 0 20px 0;
     h3 {
         padding: 5px 10px;
-        border-radius: 20px;
+        border-radius: 8px;
+        font-size: 15px;
         background-color: var(--background-terciary-color);
         color: var(--text-color);
         font-weight: normal;
