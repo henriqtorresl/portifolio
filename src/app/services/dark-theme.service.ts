@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DarkThemeService {
 
+  // salvar o darkMode na cache do navegador...
   private darkTheme: boolean = false;
 
   constructor() { }
