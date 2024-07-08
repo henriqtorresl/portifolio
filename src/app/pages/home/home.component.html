@@ -154,7 +154,12 @@
 
         <div class="technology">
             <a href="https://expressjs.com/pt-br/" target="_blank">
-                <img src="../../../assets/express.svg" alt="Express.js">
+                <ng-container *ngIf="!darkThemeService.isDarkMode() else darkModeTechnology">
+                    <img src="../../../assets/express.svg" alt="Express.js">
+                </ng-container>
+                <ng-template #darkModeTechnology>
+                    <img src="../../../assets/express-dark.svg" alt="Express.js">
+                </ng-template>
             </a>
             <p>Express.js</p>
         </div>
