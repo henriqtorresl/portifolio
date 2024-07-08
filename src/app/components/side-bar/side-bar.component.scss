@@ -53,7 +53,7 @@
   width: 100%;
   display: flex;
   justify-content: end;
-  border-bottom: 1px solid #F3F4F6;
+  border-bottom: 1px solid var(--hover-button);
   padding: 0 0 4px 0;
 
   button {
@@ -109,7 +109,7 @@
 .buttons {
   width: 100%;
   padding-top: 10px;
-  border-top: 1px solid #F3F4F6;
+  border-top: 1px solid var(--hover-button);
   display: flex;
   flex-direction: column;
   justify-content: center;
