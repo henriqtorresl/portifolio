@@ -36,7 +36,7 @@
 }
 
 .card-1 {
-    background-color: var(--background-card-1);
+    background-color: var(--background-card);
     margin: 10px 0;
     padding: 0 0 10px 0;
     width: 90%;
@@ -54,7 +54,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--background-secundary-color);
+        background-color: var(--background-card-secundary);
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
         border-bottom: 1px solid var(--hover-button);
@@ -63,6 +63,7 @@
             width: 90%;
             height: 100%;
             border-radius: 20px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
             &:hover {
                 transition: transform 0.3s ease-in-out;
@@ -92,7 +93,7 @@
 }
 
 .card-2 {
-    background-color: var(--background-card-1);
+    background-color: var(--background-card);
     margin: 10px 0;
     padding: 0 0 10px 0;
     width: 90%;
@@ -110,7 +111,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--background-secundary-color);
+        background-color: var(--background-card-secundary);
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
         border-bottom: 1px solid var(--hover-button);
@@ -119,6 +120,7 @@
             width: 90%;
             height: 100%;
             border-radius: 20px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
             &:hover {
                 transition: transform 0.3s ease-in-out;
@@ -169,7 +171,6 @@
     .card-1 {
         flex-direction: row;
         padding: 0;
-        background-color: var(--background-card-1);
         
         a {
             width: 50%;
@@ -197,7 +198,6 @@
     .card-2 {
         flex-direction: row;
         padding: 0;
-        background-color: var(--background-card-1);
         
         a {
             width: 50%;
@@ -232,7 +232,6 @@
         width: 70%;
         flex-direction: row;
         padding: 0;
-        background-color: var(--background-card-1);
         
         a {
             width: 50%;
@@ -261,7 +260,6 @@
         width: 70%;
         flex-direction: row;
         padding: 0;
-        background-color: var(--background-card-1);
         
         a {
             width: 50%;
@@ -296,7 +294,6 @@
         width: 50%;
         flex-direction: row;
         padding: 0;
-        background-color: var(--background-card-1);
         
         a {
             width: 50%;
@@ -325,7 +322,6 @@
         width: 50%;
         flex-direction: row;
         padding: 0;
-        background-color: var(--background-card-1);
         
         a {
             width: 50%;
