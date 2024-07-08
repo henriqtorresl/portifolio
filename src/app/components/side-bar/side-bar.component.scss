@@ -69,7 +69,7 @@
     border-radius: 5px;
 
     &:hover {
-      background-color: #EFEFEF;
+      background-color: var(--hover-button);
       transition: background-color 0.5s ease, transform 0.5s ease;
     }
   }
