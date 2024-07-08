@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class DarkThemeService {
 
-  // salvar o darkMode na cache do navegador...
   private darkTheme: boolean = false;
 
   constructor() { }
@@ -15,8 +14,10 @@ export class DarkThemeService {
     const className: string = 'dark-mode';
 
     if (this.darkTheme) {
+      localStorage.setItem('theme', 'dark');
       document.body.classList.add(className);
     } else {
+      localStorage.setItem('theme', 'ligth');
       document.body.classList.remove(className);
     }
   }
