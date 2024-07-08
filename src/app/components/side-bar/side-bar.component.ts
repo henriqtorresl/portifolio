@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -9,7 +10,9 @@ export class SideBarComponent {
 
   @Output() closeEvent: EventEmitter<string> = new EventEmitter();
 
-  constructor() {}
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     
@@ -19,5 +22,8 @@ export class SideBarComponent {
     this.closeEvent.emit('close');
   }
 
-}
+  isActive(route: string): string {
+    return this.router.url.includes(route) ? 'active' : '';
+  }
 
+}

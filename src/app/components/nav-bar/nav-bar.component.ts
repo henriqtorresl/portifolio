@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,7 +11,8 @@ export class NavBarComponent {
   isSidebarOpen = false;
 
   constructor(
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -31,6 +33,10 @@ export class NavBarComponent {
     if (event == 'close') {
       this.isSidebarOpen = false;
     }
+  }
+
+  isActive(route: string): string {
+    return this.router.url.includes(route) ? 'active' : '';
   }
 
 }

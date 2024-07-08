@@ -16,16 +16,21 @@
         justify-content: space-around;
         align-items: center;
 
-        li {
-            color: #4B5563;
-            cursor: pointer;
-            list-style: none;
-            font-size: 18px;
 
-            &:hover {
-                color: #111827;
-                transition: background-color 0.5s ease, transform 0.5s ease;
-            }
+        li {
+            list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: #4B5563;
+                    cursor: pointer;
+                    font-size: 18px;
+
+                    &:hover {
+                        color: #111827;
+                        transition: background-color 0.5s ease, transform 0.5s ease;
+                    }
+                }
         }
     }
 
@@ -39,6 +44,10 @@
         display: none;
     }
 }
+
+.active {
+    color: black !important;
+  }
 
 .buttons {
     display: flex;

@@ -8,9 +8,30 @@
 
         <div class="list">
             <ul>
-                <li>Sobre</li>
-                <li>Projetos</li>
-                <li>Contato</li>
+                <li>
+                    <a 
+                        routerLink="home" 
+                        [ngClass]="isActive('home')"
+                    >
+                        Sobre
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        routerLink="projects" 
+                        [ngClass]="isActive('projects')"
+                    >
+                        Projetos
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        routerLink="contact" 
+                        [ngClass]="isActive('contact')"
+                    >
+                        Contato
+                    </a>
+                </li>
             </ul>
         </div>
 
