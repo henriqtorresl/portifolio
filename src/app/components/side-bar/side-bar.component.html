@@ -38,8 +38,14 @@
         <div class="buttons">
             <div>
                 Mudar Tema
-                <button>
-                    <mat-icon>light_mode</mat-icon>
+                <button (click)="alterTheme()">
+                    <ng-container *ngIf="!darkThemeService.isDarkMode() else darkMode">
+                        <mat-icon>dark_mode</mat-icon>
+                    </ng-container>
+                    
+                    <ng-template #darkMode>
+                        <mat-icon>light_mode</mat-icon>
+                    </ng-template>
                 </button>
             </div>
             

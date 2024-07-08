@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { DarkThemeService } from 'src/app/services/dark-theme.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,7 +13,8 @@ export class NavBarComponent {
 
   constructor(
     private elementRef: ElementRef,
-    private router: Router
+    private router: Router,
+    public darkThemeService: DarkThemeService
   ) {}
 
   ngOnInit(): void {
@@ -37,6 +39,10 @@ export class NavBarComponent {
 
   isActive(route: string): string {
     return this.router.url.includes(route) ? 'active' : '';
+  }
+
+  alterTheme(): void {
+    this.darkThemeService.toogleDarkTheme();
   }
 
 }

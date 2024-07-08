@@ -1,3 +1,5 @@
+@import url('../../../styles.scss');
+
 .container-header {
     width: 100%;
     height: 10%;
@@ -5,7 +7,7 @@
     justify-content: end;
     align-items: center;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--background-color);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -22,12 +24,12 @@
 
                 a {
                     text-decoration: none;
-                    color: #4B5563;
+                    color: var(--text-color);
                     cursor: pointer;
                     font-size: 18px;
 
                     &:hover {
-                        color: #111827;
+                        color: var(--text-secundary-color);
                         transition: background-color 0.5s ease, transform 0.5s ease;
                     }
                 }
@@ -46,7 +48,7 @@
 }
 
 .active {
-    color: black !important;
+    color: var(--text-secundary-color) !important;
 }
 
 .buttons {
@@ -62,14 +64,14 @@
         justify-content: center;
         margin-left: 10px;
         border: none;
-        background-color: #FFFFFF;
+        background-color: var(--background-color);
         height: 100%;
         font-size: 18px;
     }
 }
 
 .light-button {
-    color: #111827;
+    color: var(--text-secundary-color);
 
     &:hover {
         transition: transform 0.3s ease-in-out;
@@ -80,8 +82,8 @@
 .download-button {
     padding: 5px 8px 5px 8px;
     margin-left: 10px;
-    color: #FFFFFF !important;
-    background-color: #111827;
+    color: var(--background-color) !important;
+    background-color: var(--text-secundary-color);
     border-radius: 12px;
 
     &:hover {
@@ -95,7 +97,7 @@
 
     @media (max-width: 767px) {
         position: fixed;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: var(--background-color);
         backdrop-filter: blur(10px);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 1000;
@@ -110,7 +112,7 @@
             align-items: center;
             background-color: transparent;
             border: none;
-            color: #4B5563;
+            color: var(--text-color);
             padding: 5px;
             border-radius: 5px;
             margin-right: 10px;

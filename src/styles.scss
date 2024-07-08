@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+$background-color: #FFFFFF;
+$background-secundary-color: #F9FAFB;
+$background-terciary-color: #E5E7EB;
+$text-color: #4B5563;
+$text-secundary-color: #111827;
+
+$dark-background-color: #030712;
+$dark-background-secundary-color: #111827;
+$dark-background-terciary-color: #374151;
+$dark-text-color: #D1D5DB;
+$dark-text-secundary-color: #F9FAFB;
+
+@mixin dark-mode {
+    --background-color: #{$dark-background-color};
+    --background-secundary-color: #{$dark-background-secundary-color};
+    --background-terciary-color: #{$dark-background-terciary-color};
+    --text-color: #{$dark-text-color};
+    --text-secundary-color: #{$dark-text-secundary-color};
+}
+
+:root {
+    --background-color: #{$background-color};
+    --background-secundary-color: #{$background-secundary-color};
+    --background-terciary-color: #{$background-terciary-color};
+    --text-color: #{$text-color};
+    --text-secundary-color: #{$text-secundary-color};
+}
+
+body.dark-mode {
+    @include dark-mode;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +44,7 @@ html, body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-color: #FFFFFF;
+    background-color: var(--background-color);
 }
 
 /* width */
@@ -22,17 +54,17 @@ html, body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--background-color);
     border-radius: 12px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #4B5563;
+    background: var(--text-color);
     border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #4B5563;
+    background: var(--text-color);
 }

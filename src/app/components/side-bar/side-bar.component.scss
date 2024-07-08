@@ -1,3 +1,5 @@
+@import url('../../../styles.scss');
+
 .sidebar {
   opacity: 0;
   animation: slideInRight 0.3s ease-in forwards;
@@ -34,8 +36,8 @@
   top: 0;
   right: 0;
   z-index: 9999;
-  background-color: #FFFFFF;
-  box-shadow: black 0.1em 0.1em 0.2em;
+  background-color: var(--background-color);
+  box-shadow: var(--text-secundary-color) 0.1em 0.1em 0.2em;
 }
 
 .sidebar-container {
@@ -61,8 +63,8 @@
     margin: 4px 10px 0 0;
     border: none;
     height: 80%;
-    background-color: #FFFFFF;
-    color: #4B5563;
+    background-color: var(--background-color);
+    color: var(--text-color);
     padding: 5px;
     border-radius: 5px;
 
@@ -88,11 +90,11 @@
     li {
       a {
         text-decoration: none;
-        color: #4B5563;
+        color: var(--text-color);
         cursor: pointer;
     
         &:hover {
-          color: #111827;
+          color: var(--text-secundary-color);
           transition: background-color 0.5s ease, transform 0.5s ease;
         }
       }
@@ -101,7 +103,7 @@
 }
 
 .active {
-  color: black !important;
+  color: var(--text-secundary-color) !important;
 }
 
 .buttons {
@@ -118,7 +120,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #4B5563;
+    color: var(--text-color);
     margin: 10px 0 20px 0;
 
     button {
@@ -127,8 +129,8 @@
       justify-content: center;
       margin-left: 10px;
       border: none;
-      color: #111827;
-      background-color: #FFFFFF;
+      color: var(--text-secundary-color);
+      background-color: var(--background-color);
       height: 100%;
       font-size: 18px;
 
@@ -154,8 +156,8 @@
   display: flex;
   justify-content: center;
   border: none;
-  color: #FFFFFF;
-  background-color: #111827;
+  color: var(--background-color);
+  background-color: var(--text-secundary-color);
   font-size: 14px;
   width: 80%;
   padding: 5px;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DarkThemeService } from 'src/app/services/dark-theme.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  constructor(
+    public darkThemeService: DarkThemeService
+  ) {}
 
 }

@@ -51,7 +51,14 @@
 
     <div class="experiences">
         <div class="experience">
-            <img src="../../../assets/logo-icts.png" alt="Grupo ICTS">
+        
+            <ng-container *ngIf="!darkThemeService.isDarkMode() else darkMode">
+                <img src="../../../assets/logo-icts.png" alt="Grupo ICTS">
+            </ng-container>
+            <ng-template #darkMode>
+                <img src="../../../assets/logo-icts-darkmode.png" alt="Grupo ICTS">
+            </ng-template>
+            
 
             <section>
                 <h3>Desenvolvedor Full Stack</h3>

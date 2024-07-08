@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { DarkThemeService } from 'src/app/services/dark-theme.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -11,7 +12,8 @@ export class SideBarComponent {
   @Output() closeEvent: EventEmitter<string> = new EventEmitter();
 
   constructor(
-    private router: Router
+    private router: Router,
+    public darkThemeService: DarkThemeService
   ) {}
 
   ngOnInit(): void {
@@ -24,6 +26,10 @@ export class SideBarComponent {
 
   isActive(route: string): string {
     return this.router.url.includes(route) ? 'active' : '';
+  }
+
+  alterTheme(): void {
+    this.darkThemeService.toogleDarkTheme();
   }
 
 }
