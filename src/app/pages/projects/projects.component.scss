@@ -3,7 +3,7 @@
 
 // Mobile
 .container {
-    padding-top: 50px;
+    padding-top: 10%;
     width: 100%;
     height: auto;
     display: flex;
@@ -166,7 +166,8 @@
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .container {
-        height: 800px;
+        padding-top: 1%;
+        height: 90%;
     }
 
     .card-1 {
@@ -226,7 +227,8 @@
 // Desktop
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     .container {
-        height: 800px;
+        padding-top: 1%;
+        height: 90%;
     }
 
     .card-1 {
@@ -288,7 +290,8 @@
 // Telas grandes
 @media screen and (min-width: 1200px) {
     .container {
-        height: 764px;
+        padding-top: 1%;
+        height: 90%;
     }
 
     .card-1 {
