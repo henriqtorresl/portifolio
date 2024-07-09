@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar" #sidebar>
     <div class="sidebar-container">
         <div class="close">
             <button (click)="close()">
@@ -12,6 +12,7 @@
                     <a 
                         routerLink="home" 
                         [ngClass]="isActive('home')"
+                        (click)="close()"
                     >
                         Sobre
                     </a>
@@ -20,6 +21,7 @@
                     <a 
                         routerLink="projects" 
                         [ngClass]="isActive('projects')"
+                        (click)="close()"
                     >
                         Projetos
                     </a>
@@ -28,6 +30,7 @@
                     <a 
                         routerLink="contact" 
                         [ngClass]="isActive('contact')"
+                        (click)="close()"
                     >
                         Contato
                     </a>
