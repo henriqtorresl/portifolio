@@ -25,7 +25,7 @@ export class SideBarComponent {
   close(): void {
     // Aplica a animação de fechar o side bar:
     this.sidebar.nativeElement.classList.add('slide-out');
-    
+
     // Espera um milisegundo para emitir o evento que destroi o componente
     timer(100).pipe(take(1)).subscribe( () => this.closeEvent.emit('close'));
   }
@@ -35,7 +35,14 @@ export class SideBarComponent {
   }
 
   alterTheme(): void {
-    this.darkThemeService.toogleDarkTheme();
+    // Aplica a animação de fechar o side bar:
+    this.sidebar.nativeElement.classList.add('slide-out');
+    
+    // Espera um milisegundo para emitir o evento que destroi o componente e chamar o método de alterar o tema
+    timer(100).pipe(take(1)).subscribe( () => {
+      this.closeEvent.emit('close');
+      this.darkThemeService.toogleDarkTheme();
+    });
   }
 
 }
