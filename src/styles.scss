@@ -44,6 +44,20 @@ body.dark-mode {
     @include dark-mode;
 }
 
+body.sidebar-active {
+    .container {
+        filter: blur(5px);
+    }
+
+    .container-experience {
+        filter: blur(5px);
+    }
+
+    .container-tecnologies {
+        filter: blur(5px);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

@@ -20,29 +20,43 @@ export class NavBarComponent {
   ngOnInit(): void {
   }
 
+  // Método que deixa o fundo do sidebar embaçado quando ele estiver aberto
+  animationBackgroundSideBar(): void {
+    if (this.isSidebarOpen) {
+      document.body.classList.add('sidebar-active');
+    } else {
+      document.body.classList.remove('sidebar-active');
+    }
+  }
+
   onMenuButtonClick(): void {
     this.isSidebarOpen = !this.isSidebarOpen;
+    this.animationBackgroundSideBar();
   }
 
   @HostListener('document:click', ['$event'])
   onClickOutside(event: Event): void {
     if (!this.elementRef.nativeElement.contains(event.target)) {
       this.isSidebarOpen = false; // Fecha a sidebar se o clique for fora dela
+      this.animationBackgroundSideBar();
     }
   }
 
   closeSideBar(event: string): void {
     if (event == 'close') {
       this.isSidebarOpen = false;
+      this.animationBackgroundSideBar();
     }
   }
 
   isActive(route: string): string {
+    this.animationBackgroundSideBar();
     return this.router.url.includes(route) ? 'active' : '';
   }
 
   alterTheme(): void {
     this.darkThemeService.toogleDarkTheme();
+    this.animationBackgroundSideBar();
   }
 
 }
