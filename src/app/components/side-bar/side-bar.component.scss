@@ -1,31 +1,11 @@
 @import url('../../../styles.scss');
+@import url('../../../animations.scss');
 
 .sidebar {
   opacity: 0;
   animation: slideInRight 0.3s ease-in forwards;
   
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes slideOutRight {
-    from {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-  }
-  
+  // Animação que deve ser aplicada quando o side bar some
   &.slide-out {
     animation: slideOutRight 0.3s ease-in forwards;
   }
