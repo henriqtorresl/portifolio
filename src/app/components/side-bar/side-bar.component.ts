@@ -2,6 +2,7 @@ import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular
 import { Router } from '@angular/router';
 import { DarkThemeService } from 'src/app/services/dark-theme.service';
 import { take, timer } from 'rxjs';
+import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-side-bar',
@@ -19,7 +20,7 @@ export class SideBarComponent {
   ) {}
 
   ngOnInit(): void {
-    
+
   }
 
   close(): void {
@@ -27,7 +28,7 @@ export class SideBarComponent {
     this.sidebar.nativeElement.classList.add('slide-out');
 
     // Espera um milisegundo para emitir o evento que destroi o componente
-    timer(100).pipe(take(1)).subscribe( () => this.closeEvent.emit('close'));
+    timer(100).pipe(take(1)).subscribe(() => this.closeEvent.emit('close'));
   }
 
   isActive(route: string): string {
@@ -39,7 +40,7 @@ export class SideBarComponent {
     this.sidebar.nativeElement.classList.add('slide-out');
     
     // Espera um milisegundo para emitir o evento que destroi o componente e chamar o método de alterar o tema
-    timer(100).pipe(take(1)).subscribe( () => {
+    timer(100).pipe(take(1)).subscribe(() => {
       this.closeEvent.emit('close');
       this.darkThemeService.toogleDarkTheme();
     });

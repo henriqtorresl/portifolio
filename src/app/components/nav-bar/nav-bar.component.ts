@@ -1,5 +1,6 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { take, timer } from 'rxjs';
 import { DarkThemeService } from 'src/app/services/dark-theme.service';
 
 @Component({
@@ -34,11 +35,18 @@ export class NavBarComponent {
     this.animationBackgroundSideBar();
   }
 
+  // Fecha a sidebar se o clique for fora dela
   @HostListener('document:click', ['$event'])
   onClickOutside(event: Event): void {
+    const sidebar = document.getElementsByClassName('sidebar').item(0)!;
+
     if (!this.elementRef.nativeElement.contains(event.target)) {
-      this.isSidebarOpen = false; // Fecha a sidebar se o clique for fora dela
+      // Animação do background do sidebar
       this.animationBackgroundSideBar();
+      // Aplica a animação de fechar o sidebar
+      sidebar.classList.add('slide-out');
+      // Espera um milisegundo para setar que o sidebar foi fechado
+      timer(100).pipe(take(1)).subscribe(() => this.isSidebarOpen = false);
     }
   }
 
