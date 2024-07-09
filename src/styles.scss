@@ -47,14 +47,50 @@ body.dark-mode {
 body.sidebar-active {
     .container {
         filter: blur(5px);
+
+        button {
+            pointer-events: none;
+            opacity: 0.5; 
+            cursor: not-allowed;
+        }
+    
+        a {
+            pointer-events: none;
+            opacity: 0.5; 
+            cursor: not-allowed;
+        }
     }
 
     .container-experience {
         filter: blur(5px);
+
+        button {
+            pointer-events: none;
+            opacity: 0.5; 
+            cursor: not-allowed;
+        }
+    
+        a {
+            pointer-events: none;
+            opacity: 0.5; 
+            cursor: not-allowed;
+        }
     }
 
     .container-tecnologies {
         filter: blur(5px);
+
+        button {
+            pointer-events: none;
+            opacity: 0.5; 
+            cursor: not-allowed;
+        }
+    
+        a {
+            pointer-events: none;
+            opacity: 0.5; 
+            cursor: not-allowed;
+        }
     }
 }
 
