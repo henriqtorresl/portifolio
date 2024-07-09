@@ -44,15 +44,16 @@
 
         <section>
             <ng-container *ngIf="!darkThemeService.isDarkMode() else darkModeSocial">
-                <a href="https://github.com/henriqtorresl" target="_blank"><img src="../../../assets/github.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/henrique-torres-a08a36243/" target="_blank"><img src="../../../assets/linkedin.png" alt="Linkedin"></a>
-                <a href="https://www.instagram.com/henriqtorresl" target="_blank"><img src="../../../assets/instagram.png" alt="Instagram"></a>
+                <!-- Usando o método navigateTo, pois o href está bugado... -->
+                <a (click)="navigateTo('https://github.com/henriqtorresl')"><img src="../../../assets/github.png" alt="GitHub"></a>
+                <a (click)="navigateTo('https://www.linkedin.com/in/henrique-torres-a08a36243/')"><img src="../../../assets/linkedin.png" alt="Linkedin"></a>
+                <a (click)="navigateTo('https://www.instagram.com/henriqtorresl')"><img src="../../../assets/instagram.png" alt="Instagram"></a>
             </ng-container>
 
             <ng-template #darkModeSocial>
-                <a href="https://github.com/henriqtorresl" target="_blank"><img src="../../../assets/github-dark.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/henrique-torres-a08a36243/" target="_blank"><img src="../../../assets/linkedin-dark.png" alt="Linkedin"></a>
-                <a href="https://www.instagram.com/henriqtorresl" target="_blank"><img src="../../../assets/instagram-dark.png" alt="Instagram"></a>
+                <a (click)="navigateTo('https://github.com/henriqtorresl')" ><img src="../../../assets/github-dark.png" alt="GitHub"></a>
+                <a (click)="navigateTo('https://www.linkedin.com/in/henrique-torres-a08a36243/')"><img src="../../../assets/linkedin-dark.png" alt="Linkedin"></a>
+                <a (click)="navigateTo('https://www.instagram.com/henriqtorresl')"><img src="../../../assets/instagram-dark.png" alt="Instagram"></a>
             </ng-template>
         </section>
     </div>

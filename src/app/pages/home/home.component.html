@@ -35,15 +35,16 @@
         
                 <section>
                     <ng-container *ngIf="!darkThemeService.isDarkMode() else darkModeSocial">
-                        <a href="https://github.com/henriqtorresl" target="_blank"><img src="../../../assets/github.png" alt="GitHub"></a>
-                        <a href="https://www.linkedin.com/in/henrique-torres-a08a36243/" target="_blank"><img src="../../../assets/linkedin.png" alt="Linkedin"></a>
-                        <a href="https://www.instagram.com/henriqtorresl" target="_blank"><img src="../../../assets/instagram.png" alt="Instagram"></a>
+                        <!-- Usando o método navigateTo, pois o href está bugado... -->
+                        <a (click)="navigateTo('https://github.com/henriqtorresl')"><img src="../../../assets/github.png" alt="GitHub"></a>
+                        <a (click)="navigateTo('https://www.linkedin.com/in/henrique-torres-a08a36243/')"><img src="../../../assets/linkedin.png" alt="Linkedin"></a>
+                        <a (click)="navigateTo('https://www.instagram.com/henriqtorresl')"><img src="../../../assets/instagram.png" alt="Instagram"></a>
                     </ng-container>
-
+        
                     <ng-template #darkModeSocial>
-                        <a href="https://github.com/henriqtorresl" target="_blank"><img src="../../../assets/github-dark.png" alt="GitHub"></a>
-                        <a href="https://www.linkedin.com/in/henrique-torres-a08a36243/" target="_blank"><img src="../../../assets/linkedin-dark.png" alt="Linkedin"></a>
-                        <a href="https://www.instagram.com/henriqtorresl" target="_blank"><img src="../../../assets/instagram-dark.png" alt="Instagram"></a>
+                        <a (click)="navigateTo('https://github.com/henriqtorresl')" ><img src="../../../assets/github-dark.png" alt="GitHub"></a>
+                        <a (click)="navigateTo('https://www.linkedin.com/in/henrique-torres-a08a36243/')"><img src="../../../assets/linkedin-dark.png" alt="Linkedin"></a>
+                        <a (click)="navigateTo('https://www.instagram.com/henriqtorresl')"><img src="../../../assets/instagram-dark.png" alt="Instagram"></a>
                     </ng-template>
                 </section>
             </div>
@@ -80,7 +81,7 @@
                     <li> - Aplicação da metodologia Scrum para gerenciamento de projetos.</li>
                     <li> - Desenvolvimento de uma aplicação interna de RH para gerenciar contratos, avaliações de
                     desempenho, com visualização gráfica de resultados e envio de feedbacks por email.</li>
-                    <li> - Criação do <a href="https://icts.org.br/home" target="_blank">site institucional</a> da empresa e implementação de um serviço automatizado para
+                    <li> - Criação do <a style="cursor: pointer;" (click)="navigateTo('https://icts.org.br/home')">site institucional</a> da empresa e implementação de um serviço automatizado para
                     coletar dados do LinkedIn e Google News, gerando um feed RSS atualizado.</li>
                 </ul>
             </section>
@@ -97,63 +98,63 @@
 
     <div class="technologies">
         <div class="technology">
-            <a href="https://docs.oracle.com/en/java/" target="_blank">
+            <a (click)="navigateTo('https://docs.oracle.com/en/java/')">
                 <img src="../../../assets/java.png" alt="Java">
             </a>
             <p>Java</p>
         </div>
 
         <div class="technology">
-            <a href="https://quarkus.io/guides/" target="_blank">
+            <a (click)="navigateTo('https://quarkus.io/guides/')">
                 <img src="../../../assets/Quarkus.png" alt="Quarkus">
             </a>
             <p>Quarkus</p>
         </div>
 
         <div class="technology">
-            <a href="https://docs.spring.io/spring-boot/index.html" target="_blank">
+            <a (click)="navigateTo('https://docs.spring.io/spring-boot/index.html')">
                 <img src="../../../assets/springboot.png" alt="Spring Boot">
             </a>
             <p>Spring Boot</p>
         </div>
 
         <div class="technology">
-            <a href="https://v17.angular.io/docs" target="_blank">
+            <a (click)="navigateTo('https://v17.angular.io/docs')">
                 <img src="../../../assets/angular.svg" alt="Angular">
             </a>
             <p>Angular</p>
         </div>
 
         <div class="technology">
-            <a href="https://react.dev/" target="_blank">
+            <a (click)="navigateTo('https://react.dev/')">
                 <img src="../../../assets/react.svg" alt="React">
             </a>
             <p>React</p>
         </div>
 
         <div class="technology">
-            <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
+            <a (click)="navigateTo('https://developer.mozilla.org/pt-BR/docs/Web/JavaScript')">
                 <img src="../../../assets/javascript.svg" alt="Javascript">
             </a>
             <p>Javascript</p>
         </div>
 
         <div class="technology">
-            <a href="https://www.typescriptlang.org/" target="_blank">
+            <a (click)="navigateTo('https://www.typescriptlang.org/')">
                 <img src="../../../assets/typescript.png" alt="Typescript">
             </a>
             <p>Typescript</p>
         </div>
 
         <div class="technology">
-            <a href="https://nodejs.org/pt" target="_blank">
+            <a (click)="navigateTo('https://nodejs.org/pt')">
                 <img src="../../../assets/nodejs.svg" alt="Node.js">
             </a>
             <p>Node.js</p>
         </div>
 
         <div class="technology">
-            <a href="https://expressjs.com/pt-br/" target="_blank">
+            <a (click)="navigateTo('https://expressjs.com/pt-br/')">
                 <ng-container *ngIf="!darkThemeService.isDarkMode() else darkModeTechnology">
                     <img src="../../../assets/express.svg" alt="Express.js">
                 </ng-container>
@@ -165,42 +166,42 @@
         </div>
 
         <div class="technology">
-            <a href="https://www.postgresql.org/docs/" target="_blank">
+            <a (click)="navigateTo('https://www.postgresql.org/docs/')">
                 <img src="../../../assets/postgresql.png" alt="PostgreSQL">
             </a>
             <p>PostgreSQL</p>
         </div>
 
         <div class="technology">
-            <a href="https://dev.mysql.com/doc/" target="_blank">
+            <a (click)="navigateTo('https://dev.mysql.com/doc/')">
                 <img src="../../../assets/mysql.png" alt="MySQL">
             </a>
             <p>MySQL</p>
         </div>
 
         <div class="technology">
-            <a href="https://git-scm.com/doc" target="_blank">
+            <a (click)="navigateTo('https://git-scm.com/doc')">
                 <img src="../../../assets/git.png" alt="Git">
             </a>
             <p>Git</p>
         </div>
 
         <div class="technology">
-            <a href="https://docs.docker.com/" target="_blank">
+            <a (click)="navigateTo('https://docs.docker.com/')">
                 <img src="../../../assets/docker.png" alt="Docker">
             </a>
             <p>Docker</p>
         </div>
 
         <div class="technology">
-            <a href="https://help.ubuntu.com/" target="_blank">
+            <a (click)="navigateTo('https://help.ubuntu.com/')">
                 <img src="../../../assets/ubuntu.png" alt="Ubuntu">
             </a>
             <p>Ubuntu</p>
         </div>
 
         <div class="technology">
-            <a href="https://docs.kernel.org/" target="_blank">
+            <a (click)="navigateTo('https://docs.kernel.org/')">
                 <img src="../../../assets/linux.png" alt="Linux">
             </a>
             <p>Linux</p>

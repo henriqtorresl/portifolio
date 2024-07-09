@@ -12,4 +12,8 @@ export class HomeComponent {
     public darkThemeService: DarkThemeService
   ) {}
 
+  navigateTo(url: string): void {
+    window.open(url, '_blank');
+  }
+
 }

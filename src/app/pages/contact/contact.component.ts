@@ -28,4 +28,8 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  navigateTo(url: string): void {
+    window.open(url, '_blank');
+  }
+
 }
