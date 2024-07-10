@@ -138,7 +138,7 @@
 .container-experience {
     background-color: var(--background-secundary-color);
     width: 100%;
-    height: 90%;
+    height: 160%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -146,6 +146,10 @@
 }
 
 .experience-title {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h3 {
         border-radius: 8px;
         font-size: 15px;
@@ -204,10 +208,73 @@
     }
 }
 
+.container-graduation {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.graduation-title {
+    height: 10%;
+    h3 {
+        border-radius: 8px;
+        font-size: 15px;
+        padding: 5px 10px;
+        background-color: var(--background-terciary-color);
+        color: var(--text-color);
+        font-weight: normal;
+    }
+}
+
+.graduation {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    a {
+        cursor: pointer;
+        width: 50%;
+        height: 50%;
+        border-bottom: 1px solid var(--hover-button);
+
+        img {
+            width: 100%;
+            height: 90%;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                transition: transform 0.3s ease-in-out;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    section {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        p {
+            width: 100%;
+            text-align: center;
+            color: var(--text-color)
+        }
+    }
+}
+
 .container-tecnologies {
     background-color: var(--background-color);
     width: 100%;
-    height: 75%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -259,25 +326,6 @@
 
     p {
         color: var(--text-color);
-    }
-}
-
-// Celulares pequenos
-@media screen and (max-height: 750px)  {
-    .container {
-        height: 120%;
-    }
-
-    .container-about {
-        height: 100%;
-    }
-
-    .container-experience {
-        height: 110%;
-    }
-
-    .container-tecnologies {
-        height: 95%;
     }
 }
 
@@ -334,7 +382,7 @@
 // Desktop
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     .container {
-        height: 60%;
+        height: 100%;
     }
 
     .container-about {
@@ -391,7 +439,7 @@
 // Telas grandes
 @media screen and (min-width: 1200px) {
     .container {
-        height: 60%;
+        height: 100%;
     }
 
     .container-about {
