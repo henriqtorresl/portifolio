@@ -210,7 +210,7 @@
 
 .container-graduation {
     width: 100%;
-    height: 60%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -238,8 +238,8 @@
     align-items: center;
     a {
         cursor: pointer;
-        width: 50%;
-        height: 50%;
+        width: 65%;
+        height: 35%;
         border-bottom: 1px solid var(--hover-button);
 
         img {
@@ -274,7 +274,7 @@
 .container-tecnologies {
     background-color: var(--background-color);
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -332,7 +332,7 @@
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 992px) {
     .container {
-        height: 70%;
+        height: 100%;
     }
 
     .container-about {
@@ -371,7 +371,28 @@
     }
 
     .container-experience {
-        height: 60%;
+        height: 120%;
+    }
+
+    .graduation {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+
+        a {
+            border-bottom: none;
+            border-right: 1px solid var(--hover-button);
+            height: 80%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 75%;
+                height: 45%;
+            }
+        }
     }
 
     .technologies {
@@ -424,11 +445,32 @@
     }
 
     .container-experience {
-        height: 65%;
+        height: 120%;
     }
 
     .experience {
         width: 50%;
+    }
+
+    .graduation {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+
+        a {
+            border-bottom: none;
+            border-right: 1px solid var(--hover-button);
+            height: 80%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 75%;
+                height: 55%;
+            }
+        }
     }
 
     .technologies {
@@ -485,11 +527,36 @@
     }
 
     .container-experience {
-        height: 60%;
+        height: 120%;
     }
 
     .experience {
         width: 50%;
+    }
+
+    .graduation {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+
+        a {
+            border-bottom: none;
+            border-right: 1px solid var(--hover-button);
+            height: 80%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 75%;
+                height: 65%;
+            }
+        }
+    }
+
+    .container-tecnologies {
+        height: 100%;
     }
 
     .technologies {
