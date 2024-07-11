@@ -54,14 +54,12 @@
 @keyframes downToUp {
     from {
         opacity: 0;
-        filter: blur(3px);
         transition: all 1s;
-        transform: translateY(100%);
+        transform: translateY(200%);
     }
 
     to {
         opacity: 1;
-        filter: blur(0px);
         transition: all 1s;
         transform: translateY(0);
     }

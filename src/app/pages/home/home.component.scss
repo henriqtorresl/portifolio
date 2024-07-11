@@ -136,6 +136,30 @@
     }
 }
 
+.first-icon {
+    animation: downToUp 1s ease-in;
+}
+
+.second-icon {
+    animation: downToUp 1.1s ease-in;
+}
+
+.third-icon {
+    animation: downToUp 1.2s ease-in;
+}
+
+.first-icon-dark {
+    animation: downToUp 1s ease-in;
+}
+
+.second-icon-dark {
+    animation: downToUp 1.1s ease-in;
+}
+
+.third-icon-dark {
+    animation: downToUp 1.2s ease-in;
+}
+
 .container-experience {
     background-color: var(--background-secundary-color);
     width: 100%;
