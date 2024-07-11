@@ -43,10 +43,80 @@
 
     0%,
     100% {
-        transform: translatey(0);
+        transform: translateY(0);
     }
 
     50% {
-        transform: translatey(-5px);
+        transform: translateY(-5px);
     }
+}
+
+@keyframes downToUp {
+    from {
+        opacity: 0;
+        filter: blur(3px);
+        transition: all 1s;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transition: all 1s;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hiddenToShow {
+    from {
+        opacity: 0;
+        filter: blur(3px);
+        transition: all 1s;
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transition: all 1s;
+    }
+}
+
+@keyframes comingFromRight {
+    from {
+        opacity: 0;
+        filter: blur(3px);
+        transition: all 1s;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateX(0);
+        transition: all 1s;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 1s;
+}
+
+.showFromRight {
+    opacity: 1;
+    filter: blur(0px);
+    animation: comingFromRight 0.5s ease-in;
+}
+
+.showFromDown {
+    opacity: 1;
+    filter: blur(0px);
+    animation: downToUp 0.5s ease-in;
 }

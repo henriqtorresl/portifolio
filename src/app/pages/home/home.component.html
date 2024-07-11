@@ -60,7 +60,7 @@
     </div>
 
     <div class="experiences">
-        <div class="experience">
+        <div class="experience hidden">
         
             <ng-container *ngIf="!darkThemeService.isDarkMode() else darkModeIcts">
                 <img src="../../../assets/logo-icts.png" alt="Grupo ICTS">
@@ -98,7 +98,7 @@
 
         <div class="graduation">
             <a (click)="navigateTo('https://www.unb.br/')">
-                <img src="../../../assets/logo-unb.png" alt="Universidade de Brasília">
+                <img class="unb hidden" src="../../../assets/logo-unb.png" alt="Universidade de Brasília">
             </a>
 
             <section>

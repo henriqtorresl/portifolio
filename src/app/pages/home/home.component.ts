@@ -15,7 +15,40 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.animateSubTitle();
+
+    this.animationExperience();
+
+    this.animationGraduation();
   }
+
+  animationExperience(): void {
+    const experience = document.querySelector('.experience')!;
+
+    const myObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        entries[0].target.classList.add('showFromDown');
+      }
+    }, {
+      threshold: 0.5
+    });
+
+    myObserver.observe(experience);
+  }
+
+  animationGraduation(): void {
+    const graduation = document.querySelector('.unb')!;
+
+    const myObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        entries[0].target.classList.add('showFromRight');
+      }
+    }, {
+      threshold: 0.5
+    });
+
+    myObserver.observe(graduation);
+  }
+
 
   animateSubTitle(): void {
     new TypeIt('#element', {

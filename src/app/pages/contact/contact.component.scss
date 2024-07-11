@@ -11,6 +11,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: var(--background-color);
+    animation: hiddenToShow 1s ease-in;
 }
 
 .title {
