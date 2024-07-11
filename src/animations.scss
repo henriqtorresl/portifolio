@@ -65,6 +65,20 @@
     }
 }
 
+@keyframes downToUpFast {
+    from {
+        opacity: 0;
+        transition: all 1s;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transition: all 1s;
+        transform: translateY(0);
+    }
+}
+
 @keyframes hiddenToShow {
     from {
         opacity: 0;
@@ -116,5 +130,5 @@
 .showFromDown {
     opacity: 1;
     filter: blur(0px);
-    animation: downToUp 1s ease-in;
+    animation: downToUpFast 0.5s ease-in;
 }
