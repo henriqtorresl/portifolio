@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
         entries[0].target.classList.add('showFromDown');
       }
     }, {
-      threshold: 0.5
+      threshold: 0.2
     });
 
     myObserver.observe(experience);
