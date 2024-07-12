@@ -32,8 +32,9 @@
 }
 
 .me {
-    height: 200px;
-    width: 200px;
+    background-color: red;
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +48,7 @@
 }
 
 .content {
-    height: 70%;
+    height: 80%;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -378,6 +379,8 @@
     
     .me {
         img {
+            width: 200px;
+            height: 200px;
             box-shadow: 12px 12px var(--background-terciary-color);
         }
     }
@@ -500,6 +503,19 @@
 
     .technologies {
         width: 50%;
+    }
+}
+
+// Para celulares pequenos
+@media screen and (max-height: 760px) and (max-width: 370px) {
+    .social {
+        display: none;
+    }
+
+    .resume {
+        height: 90%;
+        width: 100%;
+        text-align: center;
     }
 }
 
