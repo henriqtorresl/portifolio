@@ -1,232 +1,306 @@
 <div class="container">
-    <div class="container-about">
-        <div class="picture">
-            <div class="me">
-                <img src="../../../assets/me.png" alt="Henrique Torres">
-            </div>
-        </div>
-    
-        <div class="content">
-            <div class="resume">
-                <h1>Henrique Torres</h1>
-                <p id="element" style="margin: 5px 0 5px 0;"></p>
-                <p>
-                    Profissional com experiência em
-                    desenvolvimento de software. Busco novas
-                    oportunidades para aplicar e aprimorar minhas
-                    habilidades, contribuindo para projetos de
-                    sucesso.
-                </p>
-            </div>
-    
-            <div class="social">
-                <div>
-                    <section>
-                        <mat-icon>
-                            location_on
-                        </mat-icon>
-                        Brasília - DF, Brasil
-                    </section>
-    
-                    <section>
-                        <div class="online-signal"></div>
-                        Disponível para novos projetos
-                    </section>
-                </div>
-        
-                <section>
-                    <ng-container *ngIf="!darkThemeService.isDarkMode() else darkModeSocial">
-                        <!-- Usando o método navigateTo, pois o href está bugado... -->
-                        <a class="first-icon" (click)="navigateTo('https://github.com/henriqtorresl')"><img src="../../../assets/github.png" alt="GitHub"></a>
-                        <a class="second-icon" (click)="navigateTo('https://www.linkedin.com/in/henrique-torres-a08a36243/')"><img src="../../../assets/linkedin.png" alt="Linkedin"></a>
-                        <a class="third-icon" (click)="navigateTo('https://www.instagram.com/henriqtorresl')"><img src="../../../assets/instagram.png" alt="Instagram"></a>
-                    </ng-container>
-        
-                    <ng-template #darkModeSocial>
-                        <a class="first-icon-dark" (click)="navigateTo('https://github.com/henriqtorresl')" ><img src="../../../assets/github-dark.png" alt="GitHub"></a>
-                        <a class="second-icon-dark" (click)="navigateTo('https://www.linkedin.com/in/henrique-torres-a08a36243/')"><img src="../../../assets/linkedin-dark.png" alt="Linkedin"></a>
-                        <a class="third-icon-dark" (click)="navigateTo('https://www.instagram.com/henriqtorresl')"><img src="../../../assets/instagram-dark.png" alt="Instagram"></a>
-                    </ng-template>
-                </section>
-            </div>
-        </div>
-        
+  <div class="container-about">
+    <div class="picture">
+      <div class="me">
+        <img src="../../../assets/me.png" alt="Henrique Torres" />
+      </div>
     </div>
+
+    <div class="content">
+      <div class="resume">
+        <h1>Henrique Torres</h1>
+        <p id="element" style="margin: 5px 0 5px 0"></p>
+        <p>
+          Profissional com experiência em desenvolvimento de software. Busco
+          novas oportunidades para aplicar e aprimorar minhas habilidades,
+          contribuindo para projetos de sucesso.
+        </p>
+      </div>
+
+      <div class="social">
+        <div>
+          <section>
+            <mat-icon> location_on </mat-icon>
+            Brasília - DF, Brasil
+          </section>
+
+          <section>
+            <div class="online-signal"></div>
+            Disponível para novos projetos
+          </section>
+        </div>
+
+        <section>
+          <ng-container
+            *ngIf="!darkThemeService.isDarkMode(); else darkModeSocial"
+          >
+            <!-- Usando o método navigateTo, pois o href está bugado... -->
+            <a
+              class="first-icon"
+              (click)="navigateTo('https://github.com/henriqtorresl')"
+              ><img src="../../../assets/github.png" alt="GitHub"
+            /></a>
+            <a
+              class="second-icon"
+              (click)="
+                navigateTo(
+                  'https://www.linkedin.com/in/henrique-torres-a08a36243/'
+                )
+              "
+              ><img src="../../../assets/linkedin.png" alt="Linkedin"
+            /></a>
+            <a
+              class="third-icon"
+              (click)="navigateTo('https://www.instagram.com/henriqtorresl')"
+              ><img src="../../../assets/instagram.png" alt="Instagram"
+            /></a>
+          </ng-container>
+
+          <ng-template #darkModeSocial>
+            <a
+              class="first-icon-dark"
+              (click)="navigateTo('https://github.com/henriqtorresl')"
+              ><img src="../../../assets/github-dark.png" alt="GitHub"
+            /></a>
+            <a
+              class="second-icon-dark"
+              (click)="
+                navigateTo(
+                  'https://www.linkedin.com/in/henrique-torres-a08a36243/'
+                )
+              "
+              ><img src="../../../assets/linkedin-dark.png" alt="Linkedin"
+            /></a>
+            <a
+              class="third-icon-dark"
+              (click)="navigateTo('https://www.instagram.com/henriqtorresl')"
+              ><img src="../../../assets/instagram-dark.png" alt="Instagram"
+            /></a>
+          </ng-template>
+        </section>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container-experience">
-    <div class="experience-title">
-        <h3>Experiência</h3>
+  <div class="experience-title">
+    <h3>Experiência</h3>
+  </div>
+
+  <div class="experiences">
+    <div class="experience hidden">
+      <img
+        style="width: 110px; height: 60px"
+        src="../../../assets/logo-wrm-tecnologia.png"
+        alt="WRM Tecnologia"
+      />
+
+      <section>
+        <h3>Desenvolvedor Front-End Jr</h3>
+
+        <ul>
+          <li>
+            - Desenvolvo telas interativas e componentes dinâmicos utilizando
+            React.js e Angular, com foco em desempenho e experiência do usuário.
+          </li>
+          <li>
+            - Realizo manutenção e refatoração de código em Typescript,
+            implementando boas práticas para otimizar a legibilidade e a
+            eficiência do código.
+          </li>
+        </ul>
+      </section>
+
+      <p>Setembro 2024 - Atualmente</p>
     </div>
 
-    <div class="experiences">
-        <div class="experience hidden">
-        
-            <ng-container *ngIf="!darkThemeService.isDarkMode() else darkModeIcts">
-                <img src="../../../assets/logo-icts.png" alt="Grupo ICTS">
-            </ng-container>
-            <ng-template #darkModeIcts>
-                <img src="../../../assets/logo-icts-darkmode.png" alt="Grupo ICTS">
-            </ng-template>
-            
+    <div class="experience hidden">
+      <ng-container *ngIf="!darkThemeService.isDarkMode(); else darkModeIcts">
+        <img src="../../../assets/logo-icts.png" alt="Grupo ICTS" />
+      </ng-container>
+      <ng-template #darkModeIcts>
+        <img src="../../../assets/logo-icts-darkmode.png" alt="Grupo ICTS" />
+      </ng-template>
 
-            <section>
-                <h3>Desenvolvedor Full Stack</h3>
+      <section>
+        <h3>Desenvolvedor Full Stack (Estágio)</h3>
 
-                <ul>
-                    <li> - Desenvolvimento e manutenção de sistemas com JavaEE, NodeJS e Quarkus.</li>
-                    <li> - Criação de interfaces e componentes dinâmicos com Angular.</li>
-                    <li> - Manutenção de aplicações em containers Docker.</li>
-                    <li> - Criação de scripts de deploy automatizado.</li>
-                    <li> - Modelagem e gestão de bancos de dados PostgreSQL.</li>
-                    <li> - Aplicação da metodologia Scrum para gerenciamento de projetos.</li>
-                    <li> - Desenvolvimento de uma aplicação interna de RH para gerenciar contratos, avaliações de
-                    desempenho, com visualização gráfica de resultados e envio de feedbacks por email.</li>
-                    <li> - Criação do <a style="cursor: pointer;" (click)="navigateTo('https://icts.org.br/home')">site institucional</a> da empresa e implementação de um serviço automatizado para
-                    coletar dados do LinkedIn e Google News, gerando um feed RSS atualizado.</li>
-                </ul>
-            </section>
+        <ul>
+          <li>
+            - Desenvolvimento e manutenção de sistemas com JavaEE, NodeJS e
+            Quarkus.
+          </li>
+          <li>- Criação de interfaces e componentes dinâmicos com Angular.</li>
+          <li>- Manutenção de aplicações em containers Docker.</li>
+          <li>- Criação de scripts de deploy automatizado.</li>
+          <li>- Modelagem e gestão de bancos de dados PostgreSQL.</li>
+          <li>
+            - Aplicação da metodologia Scrum para gerenciamento de projetos.
+          </li>
+          <li>
+            - Desenvolvimento de uma aplicação interna de RH para gerenciar
+            contratos, avaliações de desempenho, com visualização gráfica de
+            resultados e envio de feedbacks por email.
+          </li>
+          <li>
+            - Criação do site institucional da empresa e implementação de um
+            serviço automatizado para coletar dados do LinkedIn e Google News,
+            gerando um feed RSS atualizado.
+          </li>
+        </ul>
+      </section>
 
-            <p>Março 2023 - Setembro 2024</p>
-        </div>
+      <p>Março 2023 - Setembro 2024</p>
+    </div>
+  </div>
+
+  <div class="container-graduation">
+    <div class="graduation-title">
+      <h3>Formação</h3>
     </div>
 
-    <div class="container-graduation">
-        <div class="graduation-title">
-            <h3>Formação</h3>
+    <div class="graduation">
+      <a (click)="navigateTo('https://www.unb.br/')">
+        <img
+          class="unb hidden"
+          src="../../../assets/logo-unb.png"
+          alt="Universidade de Brasília"
+        />
+      </a>
+
+      <section>
+        <div>
+          <p>Engenharia de Software</p>
+          <p>Universidade de Brasília (UnB)</p>
         </div>
 
-        <div class="graduation">
-            <a (click)="navigateTo('https://www.unb.br/')">
-                <img class="unb hidden" src="../../../assets/logo-unb.png" alt="Universidade de Brasília">
-            </a>
-
-            <section>
-                <div>
-                    <p>Engenharia de Software</p>
-                    <p>Universidade de Brasília (UnB)</p>
-                </div>
-
-                <p>Junho 2020 - Atualmente</p>
-            </section>
-        </div>
+        <p>Junho 2020 - Atualmente</p>
+      </section>
     </div>
+  </div>
 </div>
 
 <div class="container-tecnologies">
-    <div class="technologies-title">
-        <h3>Tecnologias</h3>
+  <div class="technologies-title">
+    <h3>Tecnologias</h3>
+  </div>
+
+  <div class="technologies">
+    <div class="technology">
+      <a (click)="navigateTo('https://docs.oracle.com/en/java/')">
+        <img src="../../../assets/java.png" alt="Java" />
+      </a>
+      <p>Java</p>
     </div>
 
-    <div class="technologies">
-        <div class="technology">
-            <a (click)="navigateTo('https://docs.oracle.com/en/java/')">
-                <img src="../../../assets/java.png" alt="Java">
-            </a>
-            <p>Java</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://quarkus.io/guides/')">
-                <img src="../../../assets/Quarkus.png" alt="Quarkus">
-            </a>
-            <p>Quarkus</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://docs.spring.io/spring-boot/index.html')">
-                <img src="../../../assets/springboot.png" alt="Spring Boot">
-            </a>
-            <p>Spring Boot</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://v17.angular.io/docs')">
-                <img src="../../../assets/angular.svg" alt="Angular">
-            </a>
-            <p>Angular</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://react.dev/')">
-                <img src="../../../assets/react.svg" alt="React">
-            </a>
-            <p>React</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://developer.mozilla.org/pt-BR/docs/Web/JavaScript')">
-                <img src="../../../assets/javascript.svg" alt="Javascript">
-            </a>
-            <p>Javascript</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://www.typescriptlang.org/')">
-                <img src="../../../assets/typescript.png" alt="Typescript">
-            </a>
-            <p>Typescript</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://nodejs.org/pt')">
-                <img src="../../../assets/nodejs.svg" alt="Node.js">
-            </a>
-            <p>Node.js</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://expressjs.com/pt-br/')">
-                <ng-container *ngIf="!darkThemeService.isDarkMode() else darkModeTechnology">
-                    <img src="../../../assets/express.svg" alt="Express.js">
-                </ng-container>
-                <ng-template #darkModeTechnology>
-                    <img src="../../../assets/express-dark.svg" alt="Express.js">
-                </ng-template>
-            </a>
-            <p>Express.js</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://www.postgresql.org/docs/')">
-                <img src="../../../assets/postgresql.png" alt="PostgreSQL">
-            </a>
-            <p>PostgreSQL</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://dev.mysql.com/doc/')">
-                <img src="../../../assets/mysql.png" alt="MySQL">
-            </a>
-            <p>MySQL</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://git-scm.com/doc')">
-                <img src="../../../assets/git.png" alt="Git">
-            </a>
-            <p>Git</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://docs.docker.com/')">
-                <img src="../../../assets/docker.png" alt="Docker">
-            </a>
-            <p>Docker</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://help.ubuntu.com/')">
-                <img src="../../../assets/ubuntu.png" alt="Ubuntu">
-            </a>
-            <p>Ubuntu</p>
-        </div>
-
-        <div class="technology">
-            <a (click)="navigateTo('https://docs.kernel.org/')">
-                <img src="../../../assets/linux.png" alt="Linux">
-            </a>
-            <p>Linux</p>
-        </div>
+    <div class="technology">
+      <a (click)="navigateTo('https://quarkus.io/guides/')">
+        <img src="../../../assets/Quarkus.png" alt="Quarkus" />
+      </a>
+      <p>Quarkus</p>
     </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://docs.spring.io/spring-boot/index.html')">
+        <img src="../../../assets/springboot.png" alt="Spring Boot" />
+      </a>
+      <p>Spring Boot</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://v17.angular.io/docs')">
+        <img src="../../../assets/angular.svg" alt="Angular" />
+      </a>
+      <p>Angular</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://react.dev/')">
+        <img src="../../../assets/react.svg" alt="React" />
+      </a>
+      <p>React</p>
+    </div>
+
+    <div class="technology">
+      <a
+        (click)="
+          navigateTo('https://developer.mozilla.org/pt-BR/docs/Web/JavaScript')
+        "
+      >
+        <img src="../../../assets/javascript.svg" alt="Javascript" />
+      </a>
+      <p>Javascript</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://www.typescriptlang.org/')">
+        <img src="../../../assets/typescript.png" alt="Typescript" />
+      </a>
+      <p>Typescript</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://nodejs.org/pt')">
+        <img src="../../../assets/nodejs.svg" alt="Node.js" />
+      </a>
+      <p>Node.js</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://expressjs.com/pt-br/')">
+        <ng-container
+          *ngIf="!darkThemeService.isDarkMode(); else darkModeTechnology"
+        >
+          <img src="../../../assets/express.svg" alt="Express.js" />
+        </ng-container>
+        <ng-template #darkModeTechnology>
+          <img src="../../../assets/express-dark.svg" alt="Express.js" />
+        </ng-template>
+      </a>
+      <p>Express.js</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://www.postgresql.org/docs/')">
+        <img src="../../../assets/postgresql.png" alt="PostgreSQL" />
+      </a>
+      <p>PostgreSQL</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://dev.mysql.com/doc/')">
+        <img src="../../../assets/mysql.png" alt="MySQL" />
+      </a>
+      <p>MySQL</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://git-scm.com/doc')">
+        <img src="../../../assets/git.png" alt="Git" />
+      </a>
+      <p>Git</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://docs.docker.com/')">
+        <img src="../../../assets/docker.png" alt="Docker" />
+      </a>
+      <p>Docker</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://help.ubuntu.com/')">
+        <img src="../../../assets/ubuntu.png" alt="Ubuntu" />
+      </a>
+      <p>Ubuntu</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://docs.kernel.org/')">
+        <img src="../../../assets/linux.png" alt="Linux" />
+      </a>
+      <p>Linux</p>
+    </div>
+  </div>
 </div>
