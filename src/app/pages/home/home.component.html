@@ -100,28 +100,29 @@
         <h3>Desenvolvedor Full Stack</h3>
 
         <ul>
+          <li>●​ Desenvolvimento e manutenção de APIs utilizando Nest.js</li>
           <li>
-            - Desenvolvimento de telas interativas e componentes dinâmicos
-            utilizando React.js e Angular, com foco em desempenho e experiência
-            do usuário.
+            ● ​Manutenção e criação de componentes com Next.js, Angular e React
+            Native
           </li>
           <li>
-            - Manutenção e refatoração de código em Typescript, implementando
-            boas práticas para otimizar a legibilidade e a eficiência do código.
+            ●​ Implementação de interfaces responsivas e performáticas
+            utilizando Next.js 15 com Server-Side Rendering (SSR), garantindo
+            carregamento otimizado
           </li>
           <li>
-            - Desenvolvimento e manutenção de APIs e serviços backend utilizando
-            o framework NestJS, com foco em escalabilidade e boas práticas.
+            ●​ Validação de formulários com React-Hook-Form + Zod, reduzindo
+            erros de submissão e melhorando a experiência do usuário
           </li>
+          <li>●​ Gerenciamento de estado global com Zustand</li>
           <li>
-            - Criação e implementação de interfaces e componentes para
-            aplicativos móveis utilizando React Native, garantindo
-            responsividade e uma experiência de usuário otimizada.
+            ●​ Criação de hooks customizados para reutilização de lógica,
+            seguindo princípios de código limpo e modularidade
           </li>
         </ul>
       </section>
 
-      <p>Setembro 2024 - Atualmente</p>
+      <p>Setembro 2024 - Atual</p>
     </div>
 
     <div class="experience hidden">
@@ -137,25 +138,29 @@
 
         <ul>
           <li>
-            - Desenvolvimento e manutenção de sistemas com JavaEE, NodeJS e
-            Quarkus.
-          </li>
-          <li>- Criação de interfaces e componentes dinâmicos com Angular.</li>
-          <li>- Manutenção de aplicações em containers Docker.</li>
-          <li>- Criação de scripts de deploy automatizado.</li>
-          <li>- Modelagem e gestão de bancos de dados PostgreSQL.</li>
-          <li>
-            - Aplicação da metodologia Scrum para gerenciamento de projetos.
+            ●​ Desenvolvimento e manutenção de APIs com JavaEE, Node.js
+            (Express.js) e Quarkus
           </li>
           <li>
-            - Desenvolvimento de uma aplicação interna de RH para gerenciar
+            ●​ Criação de interfaces e componentes dinâmicos com Angular e React
+          </li>
+          <li>
+            ●​ Manutenção de aplicações em containers Docker e criação de
+            scripts de deploy automatizado
+          </li>
+          <li>●​ Modelagem e gestão de bancos de dados PostgreSQL</li>
+          <li>
+            ●​ Aplicação da metodologia Scrum para gerenciamento de projetos
+          </li>
+          <li>
+            ●​ Desenvolvimento de uma aplicação interna de RH para gerenciar
             contratos, avaliações de desempenho, com visualização gráfica de
-            resultados e envio de feedbacks por email.
+            resultados e envio de feedbacks por email
           </li>
           <li>
-            - Criação do site institucional da empresa e implementação de um
+            ●​ Criação do site institucional da empresa e implementação de um
             serviço automatizado para coletar dados do LinkedIn e Google News,
-            gerando um feed RSS atualizado.
+            gerando um feed RSS atualizado
           </li>
         </ul>
       </section>
@@ -218,6 +223,25 @@
     </div>
 
     <div class="technology">
+      <a (click)="navigateTo('https://nextjs.org/docs')">
+        <ng-container *ngIf="!darkThemeService.isDarkMode(); else darkModeNext">
+          <img src="../../../assets/next.js.png" alt="Next.js" />
+        </ng-container>
+        <ng-template #darkModeNext>
+          <img src="../../../assets/next.js_dark.png" alt="Next.js" />
+        </ng-template>
+      </a>
+      <p>Next.js</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://docs.nestjs.com/')">
+        <img src="../../../assets/nestjs.png" alt="NestJs" />
+      </a>
+      <p>NestJs</p>
+    </div>
+
+    <div class="technology">
       <a (click)="navigateTo('https://v17.angular.io/docs')">
         <img src="../../../assets/angular.svg" alt="Angular" />
       </a>
@@ -259,11 +283,11 @@
     <div class="technology">
       <a (click)="navigateTo('https://expressjs.com/pt-br/')">
         <ng-container
-          *ngIf="!darkThemeService.isDarkMode(); else darkModeTechnology"
+          *ngIf="!darkThemeService.isDarkMode(); else darkModeExpress"
         >
           <img src="../../../assets/express.svg" alt="Express.js" />
         </ng-container>
-        <ng-template #darkModeTechnology>
+        <ng-template #darkModeExpress>
           <img src="../../../assets/express-dark.svg" alt="Express.js" />
         </ng-template>
       </a>
@@ -282,6 +306,13 @@
         <img src="../../../assets/mysql.png" alt="MySQL" />
       </a>
       <p>MySQL</p>
+    </div>
+
+    <div class="technology">
+      <a (click)="navigateTo('https://www.mongodb.com/')">
+        <img src="../../../assets/MongoDB.png" alt="MongoDB" />
+      </a>
+      <p>MongoDB</p>
     </div>
 
     <div class="technology">
