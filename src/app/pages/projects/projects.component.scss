@@ -16,6 +16,41 @@
   justify-content: space-around;
   align-items: center;
   background-color: var(--background-color);
+  position: relative;
+
+  button {
+    opacity: 0.9;
+    animation: hiddenToShow 1s ease-in;
+    position: absolute;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    padding: 5px;
+    z-index: 1000;
+    background-color: var(--background-card-secundary);
+
+    &:hover {
+      transition: 0.5s;
+      background-color: var(--hover-button);
+      transition: transform 0.3s ease-in-out;
+      transform: scale(1.1);
+    }
+  }
+}
+
+#to-up {
+  bottom: 80%;
+}
+
+#to-down {
+  top: 90%;
 }
 
 .title {

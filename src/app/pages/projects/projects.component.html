@@ -3,6 +3,10 @@
     <h3>Projetos</h3>
   </div>
 
+  <button *ngIf="showUpButton" id="to-up" (click)="scrollToUp()">
+    <mat-icon>north</mat-icon>
+  </button>
+
   <div class="projects">
     <div class="card-1" id="animation-card-1">
       <a
@@ -110,4 +114,8 @@
       </a>
     </div>
   </div>
+
+  <button *ngIf="showDownButton" id="to-down" (click)="scrollToDown()">
+    <mat-icon>south</mat-icon>
+  </button>
 </div>
