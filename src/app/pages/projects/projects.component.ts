@@ -29,11 +29,11 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         container.scrollTop < container.scrollHeight - container.clientHeight;
 
       // * Se eu quisesse que o meu botão de scrollar pra cima aparecesse bem no momento em que eu comecei a scrollar pra baixo:
-      // this.showUpButton = container.scrollTop > 0;
+      this.showUpButton = container.scrollTop > 0;
 
       // * Como eu quero que meu botão de scrollar pra cima apareça apenas quando eu chegar no final:
-      this.showUpButton =
-        container.scrollHeight - container.scrollTop === container.clientHeight;
+      // this.showUpButton =
+      //   container.scrollHeight - container.scrollTop === container.clientHeight;
     }
   }
 
