@@ -1,186 +1,188 @@
-@import url('../../../styles.scss');
-@import url('../../../animations.scss');
+@import url("../../../styles.scss");
+@import url("../../../animations.scss");
 
 // Mobile
 .container {
-    padding-top: 10%;
-    width: 100%;
-    height: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--background-color);
+  padding-top: 10%;
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--background-color);
 }
 
 .title {
-    h3 {
-        padding: 5px 10px;
-        border-radius: 8px;
-        font-size: 15px;
-        background-color: var(--background-terciary-color);
-        color: var(--text-color);
-        font-weight: normal;
-    }
+  margin-bottom: 5px;
+
+  h3 {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: var(--background-terciary-color);
+    color: var(--text-color);
+    font-weight: normal;
+  }
 }
 
 .contact {
-    height: 85%;
-    width: 100%;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  animation: hiddenToShow 1s ease-in;
+
+  div {
+    width: 90%;
+    height: 20%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
-    animation: hiddenToShow 1s ease-in;
+    color: var(--text-color);
 
-    div {
-        width: 90%;
-        height: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        color: var(--text-color);
-
-        p {
-            text-align: left;
-            display: flex;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        section {
-            width: 80%;
-            font-size: 13px;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            p {
-                display: flex;
-                justify-content: center;
-                margin: 0;
-                width: auto;
-            }
-        }
+    p {
+      text-align: left;
+      display: flex;
+      width: 100%;
+      margin-bottom: 10px;
     }
 
     section {
-        width: 40%;
+      width: 80%;
+      font-size: 13px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
         display: flex;
-        justify-content: space-around;
-
-        a {
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            border-radius: 5px;
-            cursor: pointer;
-            img {
-                width: 30px;
-                height: 30px;
-            }
-
-            &:hover {
-                background-color: var(--hover-button);
-                transition: background-color 0.5s ease, transform 0.5s ease;
-            }
-        }
+        justify-content: center;
+        margin: 0;
+        width: auto;
+      }
     }
+  }
+
+  section {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      cursor: pointer;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        background-color: var(--hover-button);
+        transition: background-color 0.5s ease, transform 0.5s ease;
+      }
+    }
+  }
 }
 
 .copy {
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
 
-    &:hover {
-        background-color: var(--hover-button);
-        transition: background-color 0.5s ease, transform 0.5s ease;
-    }
+  &:hover {
+    background-color: var(--hover-button);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+  }
 }
 
 .first-icon {
-    animation: downToUp 1s ease-in;
+  animation: downToUp 1s ease-in;
 }
 
 .second-icon {
-    animation: downToUp 1.1s ease-in;
+  animation: downToUp 1.1s ease-in;
 }
 
 .third-icon {
-    animation: downToUp 1.2s ease-in;
+  animation: downToUp 1.2s ease-in;
 }
 
 .first-icon-dark {
-    animation: downToUp 1s ease-in;
+  animation: downToUp 1s ease-in;
 }
 
 .second-icon-dark {
-    animation: downToUp 1.1s ease-in;
+  animation: downToUp 1.1s ease-in;
 }
 
 .third-icon-dark {
-    animation: downToUp 1.2s ease-in;
+  animation: downToUp 1.2s ease-in;
 }
 
 // Tablet
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    .container {
-        padding-top: 0;
-        height: 90%;
-        justify-content: center;
-    }
+  .container {
+    padding-top: 0;
+    height: 90%;
+    justify-content: center;
+  }
 
-    .contact {
-        height: 80%;
-        div {
-            width: 60%;
+  .contact {
+    height: 80%;
+    div {
+      width: 60%;
 
-            section {
-                font-size: 15px;
-            }
-        }
+      section {
+        font-size: 15px;
+      }
     }
+  }
 }
 
 // Desktop
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-    .container {
-        padding-top: 0;
-        height: 90%;
-        justify-content: center;
-    }
+  .container {
+    padding-top: 0;
+    height: 90%;
+    justify-content: center;
+  }
 
-    .contact {
-        height: 80%;
-        div {
-            width: 60%;
+  .contact {
+    height: 80%;
+    div {
+      width: 60%;
 
-            section {
-                font-size: 15px;
-            }
-        }
+      section {
+        font-size: 15px;
+      }
     }
+  }
 }
 
 // Telas grandes
 @media screen and (min-width: 1200px) {
-    .container {
-        padding-top: 0;
-        height: 90%;
-        justify-content: center;
-    }
+  .container {
+    padding-top: 0;
+    height: 90%;
+    justify-content: center;
+  }
 
-    .contact {
-        height: 80%;
-        div {
-            width: 40%;
+  .contact {
+    height: 80%;
+    div {
+      width: 40%;
 
-            section {
-                font-size: 15px;
-            }
-        }
+      section {
+        font-size: 15px;
+      }
     }
+  }
 }
