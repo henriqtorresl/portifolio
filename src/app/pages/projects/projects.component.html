@@ -1,49 +1,113 @@
 <div class="container">
-    <div class="title">
-        <h3>Projetos</h3>
+  <div class="title">
+    <h3>Projetos</h3>
+  </div>
+
+  <div class="projects">
+    <div class="card-1" id="animation-card-1">
+      <a
+        (click)="
+          navigateTo(
+            'https://github.com/henriqtorresl/2024.2_G7_SMA_DominioSaude'
+          )
+        "
+      >
+        <img
+          src="../../../assets/sma.png"
+          alt="Simulação do desenvolvimento de células cancerigenas"
+        />
+      </a>
+
+      <section>
+        <h3>Simulação do desenvolvimento de células cancerigenas</h3>
+
+        <p>
+          Projeto desenvolvido para simular tecidos cancerígenos com sistemas
+          multiagentes usando JADE, modelando células como agentes autônomos. O
+          simulador foi criado em Java (JADE - Framework para sistemas
+          multiagentes). O frontend foi desenvolvido em Angular e a API que faz
+          a comunicação via WebSocket entre o simulador e o frontend foi
+          desenvolvida em NestJS.
+        </p>
+
+        <div>
+          <section class="item">Java</section>
+          <section class="item">NestJS</section>
+          <section class="item">Angular</section>
+          <section class="item">JADE</section>
+        </div>
+      </section>
     </div>
 
-    <div class="projects">
-        <div class="card-1">
-            <a (click)="navigateTo('https://nutriguide.vercel.app/inicio')">
-                <img src="../../../assets/nutriguide.png" alt="Nutriguide">
-            </a>
+    <div class="card-2" id="animation-card-2">
+      <section>
+        <h3>Jogo MUD de Sword Art Online</h3>
 
-            <section>
-                <h3>Nutriguide</h3>
+        <p>
+          Trata-se de é um jogo multiplayer baseado em texto, inspirado no
+          universo de SAO, desenvolvido em JavaScript com PostgreSQL. Jogado via
+          terminal, permite que os jogadores escolham entre diferentes classes,
+          explorem o mundo, enfrentem inimigos e interajam em tempo real.
+          Utiliza Node.js, readline para comandos interativos e um banco de
+          dados persistente para armazenar o progresso.
+        </p>
 
-                <p>
-                    O Nutriguide é uma plataforma web com suporte mobile que facilita a comunicação entre
-                    nutricionistas e clientes, permite a criação e download de planos alimentares em PDF, avaliação de
-                    nutricionistas e acesso a uma comunidade interativa.
-                </p>
-
-                <div>
-                    <section class="item">Angular</section>
-                    <section class="item">Node.js</section>
-                    <section class="item">Express.js</section>
-                    <section class="item">SQLite</section>
-                </div>
-
-            </section>
+        <div>
+          <section class="item">Node.js</section>
+          <section class="item">JavaScript</section>
+          <section class="item">PostgreSQL</section>
         </div>
+      </section>
 
-        <div class="card-2">
-            <section>
-                <h3>Rei do Café</h3>
-
-                <p>
-                    O Rei do Café é um e-commerce de uma loja de café com suporte mobile.
-                </p>
-
-                <div>
-                    <section class="item">Angular</section>
-                </div>
-            </section>
-
-            <a (click)="navigateTo('https://rei-do-cafe.vercel.app/home')">
-                <img src="../../../assets/reidocafe.png" alt="Rei do Café">
-            </a>
-        </div>
+      <a
+        (click)="
+          navigateTo('https://github.com/henriqtorresl/2024.1-SwordArtOnline')
+        "
+      >
+        <img src="../../../assets/sao.png" alt="Sword Art Online" />
+      </a>
     </div>
+
+    <div class="card-1" id="animation-card-3">
+      <a (click)="navigateTo('https://nutriguide.vercel.app/inicio')">
+        <img src="../../../assets/nutriguide.png" alt="Nutriguide" />
+      </a>
+
+      <section>
+        <h3>Nutriguide</h3>
+
+        <p>
+          O Nutriguide é uma plataforma web com suporte mobile que facilita a
+          comunicação entre nutricionistas e clientes, permite a criação e
+          download de planos alimentares em PDF, avaliação de nutricionistas e
+          acesso a uma comunidade interativa.
+        </p>
+
+        <div>
+          <section class="item">Angular</section>
+          <section class="item">Node.js</section>
+          <section class="item">Express.js</section>
+          <section class="item">SQLite</section>
+        </div>
+      </section>
+    </div>
+
+    <div class="card-2" id="animation-card-4">
+      <section>
+        <h3>Rei do Café</h3>
+
+        <p>
+          O Rei do Café é um e-commerce de uma loja de café com suporte mobile.
+        </p>
+
+        <div>
+          <section class="item">Angular</section>
+        </div>
+      </section>
+
+      <a (click)="navigateTo('https://rei-do-cafe.vercel.app/home')">
+        <img src="../../../assets/reidocafe.png" alt="Rei do Café" />
+      </a>
+    </div>
+  </div>
 </div>
